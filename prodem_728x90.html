@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+
+	<link href="css/normalize.css" rel="stylesheet" />
+	<link href="css/jquery.bxslider.css" rel="stylesheet" />
+	<link href="css/main.css" rel="stylesheet" />
+</head>
+<body>
+<a href="http://www.up.edu.pe/prodem/default.aspx">
+<div class="wrapp-slider728x90">
+	<ul class="slider-1">
+		<li class="item-sl">
+			<img src="img/prodem-728x90-1.png" width="728" height="90">
+		</li>
+		<li class="item-sl">
+			<img src="img/prodem-728x90-2.png" width="728" height="90">
+		</li>
+		<li class="item-sl">
+			<img src="img/prodem-728x90-3.png" width="728" height="90">
+		</li>
+	</ul>
+</div>
+</a>
+
+
+<script type="text/javascript" src="js/jquery1.8.3.min.js"></script>
+<script type="text/javascript" src="js/jquery.bxslider.min.js"></script>
+<script type="text/javascript">
+	$(document).ready(function() {
+		var counter = 0;
+		var slider = $(".slider-1").bxSlider({
+			mode:'fade',
+			auto: true,
+			pager: false,
+			controls: false,
+			pause: 5000,
+			onSlideBefore: function($slideElement){
+				var cantidadItem = $('.slider-1 .item-sl').length;
+                var currentSlide = slider.getCurrentSlide();
+                var slideFinal = currentSlide + 1
+
+
+                if ( slideFinal >= cantidadItem ) {
+                        //slider.stopAuto();
+
+                };
+				// $('.b1-slider').children().removeClass('active');
+				// setTimeout( function(){
+				// 	$slideElement.addClass('active');
+				// },500);
+			}
+		});
+	});
+</script>
+</body>
+</html>

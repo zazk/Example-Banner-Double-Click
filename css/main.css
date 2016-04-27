@@ -1,0 +1,22 @@
+.wrapp-slider250x250, .wrapp-slider300x250, .wrapp-slider300x600, .wrapp-slider728x90{
+	width: 250px;
+	height: 250px;
+	overflow: hidden;
+	margin: auto;
+}
+
+.item-sl img{
+	display: block;
+}
+.wrapp-slider300x250{
+	width: 300px;
+}
+
+.wrapp-slider300x600{
+	width: 300px;
+	height: 600px;
+}
+.wrapp-slider728x90{
+	width: 728px;
+	height: 90px;
+}
